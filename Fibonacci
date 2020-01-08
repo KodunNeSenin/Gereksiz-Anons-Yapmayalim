@@ -1,0 +1,33 @@
+print("fibonnaci serisi yazdıran program", "\n")
+omega = int(input("fibonnaci serisini maksimum hangi sayıya kadar hesaplayalım ? = "))
+x = 1
+if x == 1:
+    print("\n",x,"\n",x,"\n")
+    z = x + x
+    y = z
+    print(y, "\n")
+    z = x + y
+    print(z, "\n")
+    x = x + 1
+    while ((x > 1) and (z <= omega)):
+        a = y
+        b = z
+        c = a + b
+        print(c, "\n")
+        x = b
+        y = c
+        if x > omega:
+            print("verdiğiniz maksimum", omega, "tamsayısı için bu değerden küçük ya da ona eşit son fibonnaci sayısı = ", z, "'dir")
+            z = x + y
+            break
+        if y > omega:
+            print("verdiğiniz maksimum", omega, "tamsayısı için bu değerden küçük ya da ona eşit son fibonnaci sayısı = ", x, "'dir")
+            z = x + y
+            break
+        elif not(x > omega) or not(y > omega):
+            z = x + y
+            print (z,"\n")
+            continue  
+        print("verdiğiniz maksimum", omega, "tamsayısı için bu değerden küçük ya da ona eşit son fibonnaci sayısı = ", y, "'dir")
+        break
+    print("verdiğiniz maksimum", omega, "tamsayısı için bu değerden küçük ya da ona eşit son fibonnaci sayısı = ", y, "'dir") 
